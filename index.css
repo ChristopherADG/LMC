@@ -1,0 +1,57 @@
+p.muestra{
+    border-style: inset;
+    text-align: center;
+    font-size: 25px;
+}
+p.mail{
+    margin-bottom: 0px !important;
+    width: 200%;
+    font-weight: bold;
+}
+input.muestra{
+    width: 100%;
+    text-align: center;
+}
+
+p.label1{
+    font-size: 25px;
+}
+input.mail{
+    text-align: center;
+    width: 200%;
+}
+div.mail{
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+input[type='checkbox'] {
+    transform: scale(1.5);
+}
+
+div.flag{
+    background-color: red;
+    height: 100%;
+}
+p.mensa{
+    font-size: 17px !important;
+    padding: 0px 5px 0px 5px !important;
+}
+
+.bttn{
+    background-color: rgb(73, 92, 90);
+    border: none;
+    color: white;
+    padding: 8px 18px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.I900{
+    background-color: rgb(183, 184, 183);
+    padding: 10px 20px 10px 20px;
+}

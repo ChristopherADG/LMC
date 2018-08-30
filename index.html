@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LMC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row" style="text-align: center;"> <!-- Title/Message/Flag-->
+            <div class="col-sm-3">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p>Positive</p> <!-- Positive Flag -->
+                        <div class="row">
+                            <div class="col-sm-offset-5 col-sm-2 flag" id="pos">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <p>Zero</p> <!-- Positive Flag -->
+                        <div class="row">
+                            <div class="col-sm-offset-5 col-sm-2 flag" id="zero">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6"> <!-- Title -->
+                    <h1 >LMC</h1>
+            </div>
+            <div class="col-sm-3"> <!-- Message -->
+                <p>Mensaje:</p>
+                <p id="mensaje"  class="mensa muestra">-</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">      <!-- Calculator/Counter/Inp/Out/Inte/MailBoxex-->
+            <div class="col-sm-offset-1 col-sm-3">
+                <div class="I900"> <!-- Calculator/Counter -->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="cal">
+                                <p class="label1">Calculator</p> 
+                            </label>
+                        </div>
+                        <div class=" col-sm-6">
+                            <p id="calculadora" class="muestra">000</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="cont">
+                                <p class="label1">Counter</p> 
+                            </label>
+                        </div>
+                        <div class="col-sm-offset-2 col-sm-4">
+                            <p id="cont" class="muestra">00</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="I900"> <!-- Output/Input -->
+                    <div class="row"> <!-- Output -->
+                        <div class="col-sm-6">
+                            <label for="cont">
+                                <p class="label1">Output</p> 
+                            </label>
+                        </div>
+                        <div class="col-sm-6">
+                            <p id="output" class="muestra">000</p>
+                        </div>
+                    </div>
+                    <div class="row"> <!-- Input -->
+                        <div class="col-sm-6">
+                            <label for="cont">
+                                <p class="label1">Input</p> 
+                            </label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" id="input" class="muestra" maxlength="3" disabled onkeyup="validar(this)">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="I900"> <!-- Interuptor -->
+                    <div class="row">
+                        <div class="col-sm-offset-3 col-sm-6">
+                            <p class="label1" style="font-weight: bold">Interuptor</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-offset-3 col-sm-1">
+                            <input type="checkbox" name="interrupt" id="checkbox" onchange="toggleCheckbox(this)">
+                        </div>
+                        <div class="col-sm-5">
+                            <input id="d_inte" type="text" placeholder="000" class="muestra" disabled>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row I900">
+                    <div class="col-sm-7">
+                        <button id="sig" onclick="siguientePaso();" class="bttn">Siguiente Paso</button>
+                    </div>
+                    <div class="col-sm-4">
+                        <button id="todo" onclick="todo();" class="bttn">Todo</button>
+                    </div>
+                    <div class="col-sm-4">
+                        <button id="reset" onclick="reset();" class="bttn">Reset</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-7">
+                <form  id="frm1"></form> 
+            </div>
+        </div>
+    </div>  
+</body>
+</html>
