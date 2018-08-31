@@ -186,6 +186,13 @@ function todo(){
     flags();
 }
 
+function stop(){
+    document.getElementById("mensaje").innerHTML = "Fin del programa";
+    document.getElementById("sig").disabled = true;
+    document.getElementById("todo").disabled = true;
+    return;
+}
+
 function reset(){
     contador=0;
     document.getElementById("cont").innerHTML=inputCero(contador);
